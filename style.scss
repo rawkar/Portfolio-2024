@@ -87,7 +87,7 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
 
     font-family: var(--font-serif);
-
+    margin: 0;
 }
 
 h1 {
@@ -144,8 +144,9 @@ blockquote {
     height: 120px;
     padding: 0 var(--gap-content);
     width: 100%;
-    position: fixed;
+     position: fixed;
     z-index: 99;
+    top: 0;
 
     &.menu-opened .menu {
         display: none;
@@ -270,6 +271,124 @@ blockquote {
 
 
     
+}
+
+
+
+//HERO
+
+.hero {
+    background: url(/assets/images/bg-hero.png);
+    background-size: cover;
+    height: 93vh;
+    color: var(--color-light);
+    position: relative;
+    margin-top: 70px;
+  
+
+    &__arrow {
+        position: absolute;
+      
+        bottom: 20px;
+        left: 50%;
+      
+      
+    }
+  
+    
+    &__inner {
+        display: flex;
+        justify-content: center;
+        padding: 0 4rem;
+      
+        
+        padding-top: 14rem;
+        h1 {
+            font-size: 5.875rem;
+            
+            max-width: 34rem;
+        }
+    }
+  
+
+    &__content {
+        padding-top: 2rem;
+     
+
+      &-subheader {
+        color: var(--color-secondary-400);
+
+      }
+
+      &-slash {
+        color: var(--color-light);
+      }
+
+        &-excerpt {
+            max-width: 30rem;
+        }
+       
+    }
+
+    &__portrait {
+        margin: 0 4rem;
+    }
+
+
+
+  
+
+    
+
+}
+
+// LAYOUT
+
+.main {
+
+    margin-top: var(--section-gap);
+    display: grid;
+    grid-template-columns: var(--grid-container);
+
+    &__inner {
+        max-width: var(--inner-width);
+        margin-left: auto;
+        margin-right: auto;
+        grid-column: inner-start / inner-end;
+    }
+}
+
+
+
+//FOOTER
+.footer{
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 3rem 0 .5rem;
+    margin-top: var(--section-gap);
+
+    
+    
+
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 40rem;
+        gap: var(--gap-large);
+       margin: 0 auto;
+
+       .footer__icons {
+        display: flex;
+        gap: var(--gap-large);
+
+        svg {
+            max-width: 2rem;
+        }
+       }
+    }
 }
 
 

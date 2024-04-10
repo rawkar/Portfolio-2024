@@ -53,6 +53,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  margin: 0;
 }
 
 h1 {
@@ -105,6 +106,7 @@ blockquote {
   width: 100%;
   position: fixed;
   z-index: 99;
+  top: 0;
   /* Hamburger icon and menu */
 }
 .site-header.menu-opened .menu {
@@ -201,6 +203,80 @@ blockquote {
 }
 .site-header .full-menu .menu__list a {
   font-size: var(--font-size-3);
+}
+
+.hero {
+  background: url(/assets/images/bg-hero.png);
+  background-size: cover;
+  height: 93vh;
+  color: var(--color-light);
+  position: relative;
+  margin-top: 70px;
+}
+.hero__arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
+.hero__inner {
+  display: flex;
+  justify-content: center;
+  padding: 0 4rem;
+  padding-top: 14rem;
+}
+.hero__inner h1 {
+  font-size: 5.875rem;
+  max-width: 34rem;
+}
+.hero__content {
+  padding-top: 2rem;
+}
+.hero__content-subheader {
+  color: var(--color-secondary-400);
+}
+.hero__content-slash {
+  color: var(--color-light);
+}
+.hero__content-excerpt {
+  max-width: 30rem;
+}
+.hero__portrait {
+  margin: 0 4rem;
+}
+
+.main {
+  margin-top: var(--section-gap);
+  display: grid;
+  grid-template-columns: var(--grid-container);
+}
+.main__inner {
+  max-width: var(--inner-width);
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: inner-start/inner-end;
+}
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 3rem 0 0.5rem;
+  margin-top: var(--section-gap);
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 40rem;
+  gap: var(--gap-large);
+  margin: 0 auto;
+}
+.footer__inner .footer__icons {
+  display: flex;
+  gap: var(--gap-large);
+}
+.footer__inner .footer__icons svg {
+  max-width: 2rem;
 }
 
 /* 900px or less */
