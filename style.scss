@@ -27,6 +27,7 @@
     
     --color-dark: #001524;
     --color-light: #FCFCFC;
+    --color-gray: #364156;
   
    
 
@@ -363,11 +364,51 @@ blockquote {
 
 // ABOUT
 
+
 .about {
+    position: relative;
+    padding-bottom: var(--section-gap);
+
+    &::before,
+&::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color:rgba(54, 65, 86, 0.15);
+    border-radius: 50%;
+    top: 100%;
+    transform: translateY(-50%);
+}
+
+&::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+&::after {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+&__content::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color:rgba(54, 65, 86, 0.15);
+    width: 100%; 
+    top: 100%;
+    left: 0px; 
+}
+
+
+
+    
+    
 
     &__header {
         display: flex;
-        gap: var(--gap-large);
+        gap: var(--gap-small);
         align-items: center;
         margin-bottom: var(--gap-content);
 
@@ -383,9 +424,9 @@ blockquote {
      
 
         &-box{
-            margin-bottom: var(--gap-content);
-            padding-left:5rem;
-            max-width: 60rem;
+         
+            margin-top: var(--gap-content);
+        
             position: relative;
 
             &::before {
@@ -396,9 +437,9 @@ blockquote {
                 height: 125%;
                 top: calc(1rem + .5rem);
                 bottom: 0;
-                left: 1.2rem;
+                left: -3.8rem;
              
-                background-color: hwb(205 0% 74% / 0.50);
+                background-color: var(--color-gray);
             }
 
             &:last-child::before {
@@ -429,10 +470,10 @@ blockquote {
                 width: 10px;
                 height: 10px;
                 border-radius: 100%;
-                border: 2px solid var(--color-primary);
+                border: 2px solid var( --color-gray);
                 top:1.3rem;
                 transform: translate(-45%, -50%);
-                background-color: var(--color-primary);
+                background-color: var( --color-gray);
     
             }
         }
@@ -447,16 +488,50 @@ blockquote {
 }
 
 
+
 // KOMPETENSER
 
 .kompetenser {
 
-    padding-top: var(--section-gap);
+    position: relative;
     padding-bottom: var(--section-gap);
+    padding-top: var(--section-gap);
+
+    &::before,
+&::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color:rgba(54, 65, 86, 0.15);
+    border-radius: 50%;
+    top: 100%;
+    transform: translateY(-50%);
+}
+
+&::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+&::after {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+&__content::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color:rgba(54, 65, 86, 0.15);
+    width: 100%; 
+    top: 100%;
+    left: 0px; 
+}
 
     &__header {
         display: flex;
-        gap: var(--gap-large);
+        gap: var(--gap-small);
         align-items: center;
         margin-bottom: var(--gap-large);
 
@@ -471,8 +546,8 @@ blockquote {
     &__content {
 
      
-        padding-left:5.5rem;
-        max-width: 60rem;
+        // padding-left:5.5rem;
+        max-width: 65rem;
 
         .komptenser__content-icons {
 
@@ -513,9 +588,44 @@ blockquote {
     padding-top: var(--section-gap);
     padding-bottom: var(--section-gap);
 
+    position: relative;
+    padding-bottom: var(--section-gap);
+
+    &::before,
+&::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color:rgba(54, 65, 86, 0.15);
+    border-radius: 50%;
+    top: 100%;
+    transform: translateY(-50%);
+}
+
+&::before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+&::after {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+&__content::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color:rgba(54, 65, 86, 0.15);
+    width: 100%; 
+    top: 100%;
+    left: 0px; 
+}
+
     &__header {
         display: flex;
-        gap: var(--gap-large);
+        gap: var(--gap-small);
         align-items: center;
         margin-bottom: var(--gap-large);
 
@@ -529,7 +639,7 @@ blockquote {
 
     &__content {
 
-        padding-left:5.5rem;
+        // padding-left:5.5rem;
         
 
         &-text{
@@ -575,11 +685,12 @@ blockquote {
 //KONTAKT
 
 .kontakt {
+    margin-top: var(--section-gap);
 
     &__header {
 
         display: flex;
-        gap: var(--gap-large);
+        gap: var(--gap-small);
         align-items: center;
         margin-bottom: var(--gap-large);
 
@@ -592,7 +703,7 @@ blockquote {
 
     &__content {
 
-        padding-left:5.5rem;
+        // padding-left:5.5rem;
        
 
         &-text{
@@ -602,7 +713,7 @@ blockquote {
 
         &-form {
             background-color: var(--color-secondary-400);
-            padding: 2rem 4rem;
+            padding: 1.5rem 3rem;
             border-radius: var(--border-radius);
 
         }
