@@ -21,7 +21,7 @@
     --color-primary: #002742;
     
 
-    --color-secondary-300: #f9c22ebf;
+    --color-secondary-300: hsla(44, 94%, 58%, 0.25);
     --color-secondary-400: #f9c22e;
 
     
@@ -59,6 +59,10 @@ body {
   
     margin: 0;
     padding: 0;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+
+
 
 }
 
@@ -75,12 +79,23 @@ img {
 
 }
 
+body.dark {
+    --color-dark: #FCFCFC; /* din ljusa färg */
+    --color-light: #001524; /* din mörka färg */
+    --color-primary:#FCFCFC;
+    --color-secondary-300: hsla(44, 94%, 58%, 0.182);
+}
+
+
+
 
 // TYPOGRAPHY
 
 html, body {
     font-family: var(--font-sans);
     font-size: var(--font-size);
+
+
   }
   
 
@@ -141,7 +156,7 @@ blockquote {
 //HEADER
 
 .site-header {
-    background-color: var(--color-dark);
+    background-color: #001524;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -154,7 +169,7 @@ blockquote {
     transition: background-color 0.3s;
 
     &.scroll-active {
-        background-color: var(--color-primary); 
+        background-color: #002742; 
     }
     
 
@@ -170,7 +185,7 @@ blockquote {
         gap: var(--gap-large);
 
         .menu__item a {
-            color: var(--color-light);
+            color: #FCFCFC;
             font-weight: 500;
             font-size: var(--font-size-2);
             font-family: var(--font-serif);
@@ -210,7 +225,7 @@ blockquote {
         }
         
         .hamburger {
-            background-color: var(--color-light);
+            background-color: #FCFCFC;
             width: 20px;
             height: 3px;
             position: relative;
@@ -222,7 +237,7 @@ blockquote {
             position: absolute;
             width: 100%;
             height: 3px;
-            background-color: var(--color-light);
+            background-color: #FCFCFC;
             left: 0;
             top: -8px;
             transition: top 0.2s 0.2s, transform 0.2s;
@@ -264,6 +279,7 @@ blockquote {
             right: 0;
             z-index: 50;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             display: none;
@@ -276,7 +292,7 @@ blockquote {
           .full-menu .menu__list {
             flex-direction: column;
             align-items: center;
-            gap: 3rem;
+            gap: 2rem;
 
             a {
                 font-size: var(--font-size-3);
@@ -285,7 +301,27 @@ blockquote {
           
          
   
+          .social__list-resp {
+            display: flex;
+            gap: 2rem;
+            margin-top: 6rem;
 
+            svg {
+
+                max-height: 2rem;
+            }
+
+            .social__item-resp {
+                list-style: none;
+                z-index: 299;
+              }
+              
+              .social__item-resp:hover svg path {
+                fill: var(--color-secondary-400) ;
+              }
+          }
+          
+        
 
     
 }
@@ -316,7 +352,7 @@ blockquote {
     background: url(/assets/images/bg-hero.png);
     background-size: cover;
     height: 93vh;
-    color: var(--color-light);
+    color: #FCFCFC;
     position: relative;
     margin-top: 70px;
 
@@ -378,7 +414,7 @@ blockquote {
       }
 
       &-slash {
-        color: var(--color-light);
+        color: #FCFCFC;
       }
 
         &-excerpt {
@@ -386,6 +422,7 @@ blockquote {
         }
         a {
             text-decoration: none;
+            color: #FCFCFC;
         }
         button {
             margin-top: var(--gap-small);
@@ -397,13 +434,18 @@ blockquote {
             border: 2px solid var(--color-secondary-400);
             padding: .8rem 1.5rem;
             background-color: transparent;
-            color: var(--color-light);
+            color: #FCFCFC;
             display: flex;
             align-items: center;
             gap: 1rem;
 
             svg {
                 margin-top: .2rem;
+            }
+
+            svg path {
+
+                fill: #FCFCFC;
             }
 
             
@@ -413,7 +455,7 @@ blockquote {
 
             border: 2px solid var(--color-secondary-400);
             background-color: var(--color-secondary-400);
-            color: var(--color-primary);
+            color: #002742;
 
             svg path {
               fill: #002742;
@@ -440,6 +482,7 @@ blockquote {
 
 .main {
 
+
     
     display: grid;
     grid-template-columns: var(--grid-container);
@@ -457,6 +500,7 @@ blockquote {
 
 
 .about {
+
     position: relative;
     padding-bottom: var(--section-gap);
     margin-top: var(--section-gap);
@@ -508,6 +552,15 @@ blockquote {
         svg {
             max-height: 2rem;
             margin-top: .8rem;
+
+       
+        }
+
+        svg path {
+
+            fill: var(--color-primary);
+            stroke: var(--color-light);
+          
         }
     }
 
@@ -546,13 +599,21 @@ blockquote {
         &-header{
             display: flex;
             align-items: center;
-            gap: var(--gap-small);
+            gap: .5rem;
             margin-bottom: 1rem;
             position: relative;
 
             svg {
-                max-height: 1.5rem;
+                max-height: 1.1rem;
                 margin-top: .6rem;
+            }
+
+            svg path {
+
+               
+                fill: var(--color-primary);
+                stroke: var(--color-primary);
+            
             }
 
             &::before {
@@ -571,13 +632,41 @@ blockquote {
         }
 
         &-text {
-            background-color: hsla(44, 94%, 58%, 0.25);
+            background-color: var(--color-secondary-300);
             padding: 2rem;
             border-radius: var(--border-radius);
         }
     }
 
+
+    .more-text {
+        display: none;
+      }
+      
+      .read-more-link {
+     
+        color: var(--color-primary); /* Optional: gör så att länkfärgen ärver från dess förälder */
+        cursor: pointer;
+        text-decoration: none;
+        opacity: 75%;
+    
+        svg path {
+    
+            fill: var(--color-dark);
+        }
+    
+    
+        &:hover {
+            opacity: 100%;
+        }
+        
+      }
+    
+    
+    
+
 }
+
 
 
 
@@ -629,8 +718,15 @@ blockquote {
 
         
             svg {
-                max-height: 2rem;
+                max-height: 1.8rem;
                 margin-top: .8rem;
+            }
+
+            svg path {
+
+                fill: var(--color-primary);
+                stroke: var(--color-primary);
+              
             }
         
 
@@ -638,7 +734,7 @@ blockquote {
     &__content {
 
      
-        // padding-left:5.5rem;
+        
         max-width: 65rem;
 
         .komptenser__content-icons {
@@ -646,13 +742,42 @@ blockquote {
             display: flex;
             gap: var(--gap-large);
             flex-wrap: wrap;
+
+            .komptenser__content-icon {
+
+                &:hover {
+                    
+               
+
+                }
+
+               
+            }
          
 
             svg {
 
-                max-height: 2.5rem;
+                height: 2.5rem;
+                width: 3.5rem;
+                opacity: 65%;
+           
+                
+                &:hover {
+
+                    opacity: 100%;
+                }
+              
+
+            
             }
             
+        }
+
+        .komptenser-icon-color {
+            svg path {
+
+                fill: var(--color-dark);
+            }
         }
         
 
@@ -722,10 +847,17 @@ blockquote {
         margin-bottom: var(--gap-large);
 
         
-            svg {
-                max-height: 2rem;
-                margin-top: .8rem;
-            }
+        svg {
+            max-height: 1.9rem;
+            margin-top: .8rem;
+        }
+
+        svg path {
+
+            fill: var(--color-primary);
+            
+          
+        }
 
     }
 
@@ -775,8 +907,8 @@ blockquote {
                 border-radius: var(--border-radius);
                 border: none;
                 padding: .5rem .8rem;
-                background-color: var(--color-secondary-400);
-                color: var(--color-primary);
+                background-color: #f9c22e;
+                color: #002742;
                 display: flex;
                 align-items: center;
                 gap: .7rem;
@@ -784,7 +916,10 @@ blockquote {
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
                 svg {
                     margin-top: .1rem;
+                   
                 }
+
+              
 
             }
 
@@ -821,8 +956,14 @@ blockquote {
 
         
             svg {
-                max-height: 2rem;
+                max-height: 1.5rem;
                 margin-top: .8rem;
+            }
+
+            svg path {
+
+               
+                fill: var(--color-primary);
             }
     }
 
@@ -849,7 +990,7 @@ blockquote {
             display: flex;
             flex-direction: column;
             font-family: var(--font-serif);
-            color: var(--color-primary);
+            color: #002742;
             font-size: var(--font-size-2);
 
           
@@ -911,8 +1052,8 @@ blockquote {
                 border-radius: var(--border-radius);
                 border: none;
                 padding: .7rem 1.3rem;
-                background-color: var(--color-primary);
-                color: var(--color-light);
+                background-color: #002742;
+                color: #FCFCFC;
                 display: flex;
                 align-items: center;
                 gap: 1rem;
@@ -925,8 +1066,8 @@ blockquote {
 
             button:hover {
 
-                background-color: var(--color-primary);
-                color: var(--color-secondary-400);
+                background-color: #002742;
+                color: #f9c22e;
 
                 svg path {
 
@@ -946,14 +1087,11 @@ blockquote {
 
 //FOOTER
 .footer{
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    background-color: #002742;
+    color: #FCFCFC;
     padding: 3rem 2rem .5rem;
     margin-top: var(--section-gap);
-
-    
-    
-
+  
 
     &__inner {
         display: flex;
@@ -971,6 +1109,14 @@ blockquote {
         svg {
             max-width: 2rem;
         }
+
+        svg:hover path {
+            fill: var(--color-secondary-400) ;
+          }
+      
+
+      
+
        }
     }
 
@@ -1172,24 +1318,6 @@ blockquote {
 
 
 
-
-.more-text {
-    display: none;
-  }
-  
-  .read-more-link {
- 
-    color: var(--color-primary); /* Optional: gör så att länkfärgen ärver från dess förälder */
-    cursor: pointer;
-    text-decoration: none;
-    opacity: 75%;
-
-
-    &:hover {
-        opacity: 100%;
-    }
-    
-  }
 
   
   

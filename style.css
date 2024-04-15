@@ -13,7 +13,7 @@
   --font-size-small: calc(var(--font-size-1) / var(--font-scale));
   --line-height: 1.6;
   --color-primary: #002742;
-  --color-secondary-300: #f9c22ebf;
+  --color-secondary-300: hsla(44, 94%, 58%, 0.25);
   --color-secondary-400: #f9c22e;
   --color-dark: #001524;
   --color-light: #FCFCFC;
@@ -36,6 +36,8 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 figure {
@@ -46,6 +48,13 @@ img {
   max-width: 100%;
   width: auto;
   height: auto;
+}
+
+body.dark {
+  --color-dark: #FCFCFC; /* din ljusa färg */
+  --color-light: #001524; /* din mörka färg */
+  --color-primary:#FCFCFC;
+  --color-secondary-300: hsla(44, 94%, 58%, 0.182);
 }
 
 html, body {
@@ -101,7 +110,7 @@ blockquote {
 }
 
 .site-header {
-  background-color: var(--color-dark);
+  background-color: #001524;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,7 +124,7 @@ blockquote {
   /* Hamburger icon and menu */
 }
 .site-header.scroll-active {
-  background-color: var(--color-primary);
+  background-color: #002742;
 }
 .site-header.menu-opened .menu {
   display: none;
@@ -126,7 +135,7 @@ blockquote {
   gap: var(--gap-large);
 }
 .site-header .menu__list .menu__item a {
-  color: var(--color-light);
+  color: #FCFCFC;
   font-weight: 500;
   font-size: var(--font-size-2);
   font-family: var(--font-serif);
@@ -155,7 +164,7 @@ blockquote {
   flex-shrink: 0;
 }
 .site-header .hamburger {
-  background-color: var(--color-light);
+  background-color: #FCFCFC;
   width: 20px;
   height: 3px;
   position: relative;
@@ -166,7 +175,7 @@ blockquote {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: var(--color-light);
+  background-color: #FCFCFC;
   left: 0;
   top: -8px;
   transition: top 0.2s 0.2s, transform 0.2s;
@@ -200,6 +209,7 @@ blockquote {
   right: 0;
   z-index: 50;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   display: none;
@@ -210,10 +220,25 @@ blockquote {
 .site-header .full-menu .menu__list {
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .site-header .full-menu .menu__list a {
   font-size: var(--font-size-3);
+}
+.site-header .social__list-resp {
+  display: flex;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+.site-header .social__list-resp svg {
+  max-height: 2rem;
+}
+.site-header .social__list-resp .social__item-resp {
+  list-style: none;
+  z-index: 299;
+}
+.site-header .social__list-resp .social__item-resp:hover svg path {
+  fill: var(--color-secondary-400);
 }
 
 @keyframes bounce {
@@ -237,7 +262,7 @@ blockquote {
   background: url(/assets/images/bg-hero.png);
   background-size: cover;
   height: 93vh;
-  color: var(--color-light);
+  color: #FCFCFC;
   position: relative;
   margin-top: 70px;
 }
@@ -280,13 +305,14 @@ blockquote {
   color: var(--color-secondary-400);
 }
 .hero__content-slash {
-  color: var(--color-light);
+  color: #FCFCFC;
 }
 .hero__content-excerpt {
   max-width: 30rem;
 }
 .hero__content a {
   text-decoration: none;
+  color: #FCFCFC;
 }
 .hero__content button {
   margin-top: var(--gap-small);
@@ -298,7 +324,7 @@ blockquote {
   border: 2px solid var(--color-secondary-400);
   padding: 0.8rem 1.5rem;
   background-color: transparent;
-  color: var(--color-light);
+  color: #FCFCFC;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -306,10 +332,13 @@ blockquote {
 .hero__content button svg {
   margin-top: 0.2rem;
 }
+.hero__content button svg path {
+  fill: #FCFCFC;
+}
 .hero__content button:hover {
   border: 2px solid var(--color-secondary-400);
   background-color: var(--color-secondary-400);
-  color: var(--color-primary);
+  color: #002742;
 }
 .hero__content button:hover svg path {
   fill: #002742;
@@ -371,6 +400,10 @@ blockquote {
   max-height: 2rem;
   margin-top: 0.8rem;
 }
+.about__header svg path {
+  fill: var(--color-primary);
+  stroke: var(--color-light);
+}
 .about__content-box {
   margin-top: var(--gap-content);
   position: relative;
@@ -391,13 +424,17 @@ blockquote {
 .about__content-header {
   display: flex;
   align-items: center;
-  gap: var(--gap-small);
+  gap: 0.5rem;
   margin-bottom: 1rem;
   position: relative;
 }
 .about__content-header svg {
-  max-height: 1.5rem;
+  max-height: 1.1rem;
   margin-top: 0.6rem;
+}
+.about__content-header svg path {
+  fill: var(--color-primary);
+  stroke: var(--color-primary);
 }
 .about__content-header::before {
   content: "";
@@ -412,9 +449,24 @@ blockquote {
   background-color: var(--color-gray);
 }
 .about__content-text {
-  background-color: hsla(44, 94%, 58%, 0.25);
+  background-color: var(--color-secondary-300);
   padding: 2rem;
   border-radius: var(--border-radius);
+}
+.about .more-text {
+  display: none;
+}
+.about .read-more-link {
+  color: var(--color-primary); /* Optional: gör så att länkfärgen ärver från dess förälder */
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 75%;
+}
+.about .read-more-link svg path {
+  fill: var(--color-dark);
+}
+.about .read-more-link:hover {
+  opacity: 100%;
 }
 
 .kompetenser {
@@ -456,8 +508,12 @@ blockquote {
   margin-bottom: var(--gap-large);
 }
 .kompetenser__header svg {
-  max-height: 2rem;
+  max-height: 1.8rem;
   margin-top: 0.8rem;
+}
+.kompetenser__header svg path {
+  fill: var(--color-primary);
+  stroke: var(--color-primary);
 }
 .kompetenser__content {
   max-width: 65rem;
@@ -468,7 +524,15 @@ blockquote {
   flex-wrap: wrap;
 }
 .kompetenser__content .komptenser__content-icons svg {
-  max-height: 2.5rem;
+  height: 2.5rem;
+  width: 3.5rem;
+  opacity: 65%;
+}
+.kompetenser__content .komptenser__content-icons svg:hover {
+  opacity: 100%;
+}
+.kompetenser__content .komptenser-icon-color svg path {
+  fill: var(--color-dark);
 }
 .kompetenser__content p {
   margin-bottom: var(--gap-content);
@@ -513,8 +577,11 @@ blockquote {
   margin-bottom: var(--gap-large);
 }
 .projekt__header svg {
-  max-height: 2rem;
+  max-height: 1.9rem;
   margin-top: 0.8rem;
+}
+.projekt__header svg path {
+  fill: var(--color-primary);
 }
 .projekt__content-text {
   margin-bottom: var(--gap-large);
@@ -545,8 +612,8 @@ blockquote {
   border-radius: var(--border-radius);
   border: none;
   padding: 0.5rem 0.8rem;
-  background-color: var(--color-secondary-400);
-  color: var(--color-primary);
+  background-color: #f9c22e;
+  color: #002742;
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -573,8 +640,11 @@ blockquote {
   margin-bottom: var(--gap-large);
 }
 .kontakt__header svg {
-  max-height: 2rem;
+  max-height: 1.5rem;
   margin-top: 0.8rem;
+}
+.kontakt__header svg path {
+  fill: var(--color-primary);
 }
 .kontakt__content {
   max-width: 64rem;
@@ -593,7 +663,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   font-family: var(--font-serif);
-  color: var(--color-primary);
+  color: #002742;
   font-size: var(--font-size-2);
 }
 .kontakt__content form #name::placeholder,
@@ -632,8 +702,8 @@ blockquote {
   border-radius: var(--border-radius);
   border: none;
   padding: 0.7rem 1.3rem;
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: #002742;
+  color: #FCFCFC;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -643,16 +713,16 @@ blockquote {
   margin-top: 0.3rem;
 }
 .kontakt__content form button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-secondary-400);
+  background-color: #002742;
+  color: #f9c22e;
 }
 .kontakt__content form button:hover svg path {
   fill: var(--color-secondary-400);
 }
 
 .footer {
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: #002742;
+  color: #FCFCFC;
   padding: 3rem 2rem 0.5rem;
   margin-top: var(--section-gap);
 }
@@ -671,6 +741,9 @@ blockquote {
 }
 .footer__inner .footer__icons svg {
   max-width: 2rem;
+}
+.footer__inner .footer__icons svg:hover path {
+  fill: var(--color-secondary-400);
 }
 .footer__copyright {
   color: var(--color-gray);
@@ -772,19 +845,6 @@ blockquote {
   .footer__inner h5 {
     font-size: var(--font-size-1);
   }
-}
-.more-text {
-  display: none;
-}
-
-.read-more-link {
-  color: var(--color-primary); /* Optional: gör så att länkfärgen ärver från dess förälder */
-  cursor: pointer;
-  text-decoration: none;
-  opacity: 75%;
-}
-.read-more-link:hover {
-  opacity: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
