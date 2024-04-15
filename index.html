@@ -6,30 +6,34 @@
     <title>Rawaz Karim – portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="js/menuToggle.js" defer></script>
+    <script src="js/siteScroll.js" defer></script>
+    <script src="js/textExpand.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
 
-    <header class="site-header">
+    <header id="start" class="site-header">
       <!-- Logo -->
-      <figure class="branding">
-        <img src="/assets/images/logo.png" alt="RK Logo" />
+      <figure class="branding"> <a href="#start">
+        <img  src="/assets/images/logo.png" alt="RK Logo" />
+
+    </a>
       </figure>
       <!-- Nav -->
 
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item menu__item-current">
-            <a href="" class="menu__link">Start</a>
+            <a href="#start" class="menu__link">Start</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Om mig</a>
+            <a href="#about" class="menu__link">Om mig</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Kompetenser</a>
+            <a href="#skills" class="menu__link">Kompetenser</a>
           </li>
-          <li class="menu__item"><a href="" class="menu__link">Projekt</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Kontakt</a></li>
+          <li class="menu__item"><a href="#projekt" class="menu__link">Projekt</a></li>
+          <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
         </ul>
       </nav>
 
@@ -52,16 +56,16 @@
       <nav class="full-menu">
         <ul class="menu__list">
           <li class="menu__item menu__item-current">
-            <a href="" class="menu__link">Start</a>
+            <a href="#start" class="menu__link">Start</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Om mig</a>
+            <a href="#about" class="menu__link">Om mig</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Kompetenser</a>
+            <a href="#skills"  class="menu__link">Kompetenser</a>
           </li>
-          <li class="menu__item"><a href="" class="menu__link">Projekt</a></li>
-          <li class="menu__item"><a href="" class="menu__link">Kontakt</a></li>
+          <li class="menu__item"><a href="#projekt" class="menu__link">Projekt</a></li>
+          <li class="menu__item"><a href="#kontakt" class="menu__link">Kontakt</a></li>
         </ul>
       </nav>
     </header>
@@ -79,7 +83,18 @@
             Dolor, facilis impedit error dignissimos dicta nihil doloribus ullam
             accusamus perferendis labore in minus dolorem.
           </p>
-          <button class="hero__content-button">Kontakta mig</button>
+          <a href="#kontakt" class="menu__link">
+          <button   class="hero__content-button">Kontakta mig <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.42233 9.86355L18.6295 9.86355L13.6769 15.2124C13.2811 15.6399 13.2811 16.3413 13.6769 16.7688C13.7708 16.8704 13.8823 16.951 14.0051 17.006C14.1278 17.061 14.2595 17.0894 14.3924 17.0894C14.5253 17.0894 14.6569 17.061 14.7797 17.006C14.9025 16.951 15.014 16.8704 15.1079 16.7688L21.796 9.54569C21.8901 9.44429 21.9647 9.32384 22.0156 9.19125C22.0666 9.05865 22.0928 8.91651 22.0928 8.77296C22.0928 8.62941 22.0666 8.48727 22.0156 8.35467C21.9647 8.22208 21.8901 8.10163 21.796 8.00023L15.1079 0.777105C15.0139 0.675628 14.9024 0.595135 14.7796 0.540216C14.6568 0.485297 14.5253 0.457031 14.3924 0.457031C14.2595 0.457031 14.1279 0.485297 14.0052 0.540216C13.8824 0.595135 13.7708 0.675628 13.6769 0.777105C13.5829 0.878581 13.5084 0.999053 13.4575 1.13164C13.4067 1.26422 13.3805 1.40633 13.3805 1.54984C13.3805 1.69335 13.4067 1.83545 13.4575 1.96804C13.5084 2.10062 13.5829 2.22109 13.6769 2.32257L18.6295 7.67141L1.42233 7.67141C0.86414 7.67141 0.40744 8.16464 0.40744 8.76748C0.40744 9.37032 0.864139 9.86355 1.42233 9.86355Z" fill="#FCFCFC"/>
+            </svg>
+
+            
+
+
+          
+            </button>
+
+        </a>
         </div>
 
         <!-- Hero portrait -->
@@ -90,21 +105,16 @@
           </figure>
         </div>
 
-        <!-- <div class="hero__icons">
-          <figure>
-            <img src="/assets/images/hero-icons.png" alt="" />
-          </figure>
-        </div> -->
-
+       
       </div>
 
       <!-- Arrow -->
-      <div class="hero__arrow">
+      <div class="hero__arrow"> <a href="#about">
         <svg
           width="36"
           height="35"
           viewBox="0 0 36 35"
-          fill="none"
+          fill="FCFCFC"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -112,17 +122,19 @@
             fill="#FCFCFC"
           />
         </svg>
+
+    </a>
       </div>
     </section>
 
     <section class="main">
       <div class="main__inner">
         <!-- ABOUT -->
-        <div class="about">
+        <div id="about" class="about">
           <div class="about__header">
            
 
-            <h2 class="about__header-title">Om mig</h2>
+            <h2    class="about__header-title">Om mig</h2>
 
             <figure class="about__header-icon">
                 <svg
@@ -150,10 +162,13 @@
 
           <div class="about__content">
             <!-- Box 1 -->
-            <div class="about__content-box">
-              <div class="about__content-header">
-                <h3 class="about__content-title">Kod & kommunikation</h3>
-                <figure class="about__content-icon">
+            
+
+             <div class="about__content-box">
+                <div class="about__content-header">
+                  <h3 class="about__content-title">Kod & kommunikation</h3>
+
+                   <figure class="about__content-icon">
                   <svg
                     width="44"
                     height="36"
@@ -179,14 +194,18 @@
                     </defs>
                   </svg>
                 </figure>
-              </div>
+               
+                </div>
+                <div class="about__content-text"> Sunt omnis nisi totam sed nihil aspernatur minima cupiditate quaerat, fugit, ad doloribus! Et tempore voluptas necessitatibus at odio laudantium quasi corrupti! Esse ipsam sit dolorem harum, amet non adipisci corrupti provident, placeat odio reiciendis quae laboriosam ullam quis praesentium similique inventore ex consequuntur ab quod quisquam sint. <br> <br> Nulla quae quibusdam illo provident id iusto harum ea ex libero consequuntur. Eveniet, accusamus adipisci voluptate eos tempora aliquid similique recusandae error distinctio modi et perspiciatis explicabo atque obcaecati. Ut possimus consectetur sit ducimus quia. Laudantium unde praesentium nemo eligendi! Aperiam fuga ipsa voluptatum tempore accusantium voluptates architecto. Praesentium, culpa. Itaque beatae delectus dolor consectetur eum, doloribus facilis tempore tempora totam natus illo quo eos accusantium minus obcaecati vitae nihil labore culpa hic autem facere! Asperiores, quasi optio fugit porro a error perferendis tempora labore vitae sed sapiente exercitationem? <br> <br> Est aut enim asperiores provident voluptates architecto quaerat alias accusantium incidunt sint doloremque, fuga voluptatem perspiciatis unde suscipit, labore tenetur tempore dolor nemo nihil blanditiis vero modi. Pariatur nisi quis, earum magni beatae illo assumenda corrupti optio reprehenderit fugiat culpa quos sapiente nobis rem sunt ab debitis adipisci omnis repellat. Nesciunt esse omnis rerum saepe qui asperiores reiciendis quasi! Odio repellendus hic totam quos tempore at earum reprehenderit itaque, soluta ratione sed quam doloribus quia ducimus nesciunt quisquam officiis non provident eum eligendi dignissimos sit asperiores aperiam. <br> <br> Quisquam eligendi perspiciatis molestias placeat enim vitae nemo laboriosam harum sequi incidunt beatae nesciunt ut quis, delectus dicta!
+                  <span class="preview-text"></span><span class="more-text"></span>
+                  <a href="javascript:void(0);" class="read-more-link"></a>
+                </div>
+              </div> 
+              
+            
 
-              <div class="about__content-text">
-                Lorem ipsum dolor sit amet consectetur. Eros in porttitor nisi est aliquet odio. Arcu ut tortor imperdiet vitae neque sapien convallis elementum. Elit egestas velit mattis sagittis sed eget. Cursus eu lectus mi faucibus sed. Risus lorem rhoncus nisi adipiscing vivamus dui. Tristique nulla tincidunt dis massa ipsum. Interdum pharetra duis mollis convallis adipiscing placerat proin. <br> <br>
 
-                Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed semper mattis sed. Cras nibh imperdiet velit nibh pulvinar porttitor. Volutpat sagittis magna ultricies sollicitudin diam...
-              </div>
-            </div>
+
 
             <!-- Box 2 -->
             <div class="about__content-box">
@@ -224,10 +243,9 @@
                 </figure>
               </div>
 
-              <div class="about__content-text">
-                Lorem ipsum dolor sit amet consectetur. Eros in porttitor nisi est aliquet odio. Arcu ut tortor imperdiet vitae neque sapien convallis elementum. Elit egestas velit mattis sagittis sed eget. Cursus eu lectus mi faucibus sed. Risus lorem rhoncus nisi adipiscing vivamus dui. Tristique nulla tincidunt dis massa ipsum. Interdum pharetra duis mollis convallis adipiscing placerat proin. <br> <br>
-
-Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed semper mattis sed. Cras nibh imperdiet velit nibh pulvinar porttitor. Volutpat sagittis magna ultricies sollicitudin diam...
+              <div class="about__content-text"> Sunt omnis nisi totam sed nihil aspernatur minima cupiditate quaerat, fugit, ad doloribus! Et tempore voluptas necessitatibus at odio laudantium quasi corrupti! Esse ipsam sit dolorem harum, amet non adipisci corrupti provident, placeat odio reiciendis quae laboriosam ullam quis praesentium similique inventore ex consequuntur ab quod quisquam sint. <br> <br> Nulla quae quibusdam illo provident id iusto harum ea ex libero consequuntur. Eveniet, accusamus adipisci voluptate eos tempora aliquid similique recusandae error distinctio modi et perspiciatis explicabo atque obcaecati. Ut possimus consectetur sit ducimus quia. Laudantium unde praesentium nemo eligendi! Aperiam fuga ipsa voluptatum tempore accusantium voluptates architecto. Praesentium, culpa. Itaque beatae delectus dolor consectetur eum, doloribus facilis tempore tempora totam natus illo quo eos accusantium minus obcaecati vitae nihil labore culpa hic autem facere! Asperiores, quasi optio fugit porro a error perferendis tempora labore vitae sed sapiente exercitationem? <br> <br> Est aut enim asperiores provident voluptates architecto quaerat alias accusantium incidunt sint doloremque, fuga voluptatem perspiciatis unde suscipit, labore tenetur tempore dolor nemo nihil blanditiis vero modi. Pariatur nisi quis, earum magni beatae illo assumenda corrupti optio reprehenderit fugiat culpa quos sapiente nobis rem sunt ab debitis adipisci omnis repellat. Nesciunt esse omnis rerum saepe qui asperiores reiciendis quasi! Odio repellendus hic totam quos tempore at earum reprehenderit itaque, soluta ratione sed quam doloribus quia ducimus nesciunt quisquam officiis non provident eum eligendi dignissimos sit asperiores aperiam. <br> <br> Quisquam eligendi perspiciatis molestias placeat enim vitae nemo laboriosam harum sequi incidunt beatae nesciunt ut quis, delectus dicta!
+                <span class="preview-text"></span><span class="more-text"></span>
+                <a href="javascript:void(0);" class="read-more-link"></a>
               </div>
             </div>
 
@@ -267,10 +285,9 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
                 </figure>
               </div>
 
-              <div class="about__content-text">
-                Lorem ipsum dolor sit amet consectetur. Eros in porttitor nisi est aliquet odio. Arcu ut tortor imperdiet vitae neque sapien convallis elementum. Elit egestas velit mattis sagittis sed eget. Cursus eu lectus mi faucibus sed. Risus lorem rhoncus nisi adipiscing vivamus dui. Tristique nulla tincidunt dis massa ipsum. Interdum pharetra duis mollis convallis adipiscing placerat proin. <br> <br>
-
-                Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed semper mattis sed. Cras nibh imperdiet velit nibh pulvinar porttitor. Volutpat sagittis magna ultricies sollicitudin diam...
+              <div class="about__content-text"> Sunt omnis nisi totam sed nihil aspernatur minima cupiditate quaerat, fugit, ad doloribus! Et tempore voluptas necessitatibus at odio laudantium quasi corrupti! Esse ipsam sit dolorem harum, amet non adipisci corrupti provident, placeat odio reiciendis quae laboriosam ullam quis praesentium similique inventore ex consequuntur ab quod quisquam sint. <br> <br> Nulla quae quibusdam illo provident id iusto harum ea ex libero consequuntur. Eveniet, accusamus adipisci voluptate eos tempora aliquid similique recusandae error distinctio modi et perspiciatis explicabo atque obcaecati. Ut possimus consectetur sit ducimus quia. Laudantium unde praesentium nemo eligendi! Aperiam fuga ipsa voluptatum tempore accusantium voluptates architecto. Praesentium, culpa. Itaque beatae delectus dolor consectetur eum, doloribus facilis tempore tempora totam natus illo quo eos accusantium minus obcaecati vitae nihil labore culpa hic autem facere! Asperiores, quasi optio fugit porro a error perferendis tempora labore vitae sed sapiente exercitationem? <br> <br> Est aut enim asperiores provident voluptates architecto quaerat alias accusantium incidunt sint doloremque, fuga voluptatem perspiciatis unde suscipit, labore tenetur tempore dolor nemo nihil blanditiis vero modi. Pariatur nisi quis, earum magni beatae illo assumenda corrupti optio reprehenderit fugiat culpa quos sapiente nobis rem sunt ab debitis adipisci omnis repellat. Nesciunt esse omnis rerum saepe qui asperiores reiciendis quasi! Odio repellendus hic totam quos tempore at earum reprehenderit itaque, soluta ratione sed quam doloribus quia ducimus nesciunt quisquam officiis non provident eum eligendi dignissimos sit asperiores aperiam. <br> <br> Quisquam eligendi perspiciatis molestias placeat enim vitae nemo laboriosam harum sequi incidunt beatae nesciunt ut quis, delectus dicta!
+                <span class="preview-text"></span><span class="more-text"></span>
+                <a href="javascript:void(0);" class="read-more-link"></a>
               </div>
             </div>
           </div>
@@ -278,10 +295,10 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
 
         <!-- KOMPETENSER -->
 
-        <div class="kompetenser">
-          <div class="kompetenser__header">
+        <div  id="skills" class="kompetenser">
+          <div  class="kompetenser__header">
 
-            <h2 class="about__header-title">Kompetenser</h2>
+            <h2  class="about__header-title">Kompetenser</h2>
             <figure class="kompetenser__header-icon">
               <svg
                 width="46"
@@ -986,10 +1003,10 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
         </div>
 
         <!-- PROJEKT -->
-        <div class="projekt">
+        <div id="projekt" class="projekt">
           <div class="projekt__inner">
             <div class="projekt__header">
-                <h2 class="projekt__header-title">Projekt
+                <h2  class="projekt__header-title">Projekt
                 </h2>
               <figure class="projekt__header-icon">
                 <svg
@@ -1052,7 +1069,10 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
                         <p class="projekt__content-excerpt">Lorem ipsum dolor sit amet consectetur. Quis massa et convallis amet sed. Tellus mauris volutpat turpis vitae at orci lorem sodales mi. Pharetra tempor rutrum tellus nisl id proin fermentum. 
                             <br> <br> Sed magna nunc ut fames condimentum dictum. Libero egestas lectus facilisis aliquam.
                           </p>
-                            <button class="projekt__content-button">Till Github</button>
+                            <button class="projekt__content-button">Till Github <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.786737 6.48533L11.954 6.48533L8.73983 9.95667C8.48295 10.2341 8.48295 10.6894 8.73983 10.9668C8.80076 11.0327 8.87314 11.085 8.95282 11.1207C9.0325 11.1564 9.11791 11.1748 9.20418 11.1748C9.29044 11.1748 9.37585 11.1564 9.45553 11.1207C9.53521 11.085 9.60759 11.0327 9.66852 10.9668L14.009 6.27904C14.0701 6.21323 14.1185 6.13506 14.1516 6.04901C14.1846 5.96296 14.2017 5.87071 14.2017 5.77754C14.2017 5.68438 14.1846 5.59213 14.1516 5.50608C14.1185 5.42002 14.0701 5.34186 14.009 5.27605L9.66853 0.588308C9.60755 0.522451 9.53515 0.470212 9.45548 0.43457C9.37581 0.398928 9.29041 0.380583 9.20418 0.380583C9.11794 0.380583 9.03255 0.398928 8.95287 0.43457C8.8732 0.470212 8.80081 0.522451 8.73983 0.588308C8.67885 0.654166 8.63048 0.732351 8.59747 0.818398C8.56447 0.904444 8.54749 0.996669 8.54749 1.08981C8.54749 1.18294 8.56447 1.27516 8.59747 1.36121C8.63048 1.44726 8.67885 1.52544 8.73983 1.5913L11.954 5.06265L0.786737 5.06265C0.424479 5.06265 0.128085 5.38275 0.128085 5.77399C0.128085 6.16522 0.424478 6.48533 0.786737 6.48533Z" fill="#002642"/>
+                                </svg>
+                                </button>
                 </div>
 
                
@@ -1071,7 +1091,10 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
                                 <br> <br> Sed magna nunc ut fames condimentum dictum. Libero egestas lectus facilisis aliquam.
                               </p>
 
-                                <button class="projekt__content-button">Till Github</button>
+                                <button class="projekt__content-button">Till Github <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.786737 6.48533L11.954 6.48533L8.73983 9.95667C8.48295 10.2341 8.48295 10.6894 8.73983 10.9668C8.80076 11.0327 8.87314 11.085 8.95282 11.1207C9.0325 11.1564 9.11791 11.1748 9.20418 11.1748C9.29044 11.1748 9.37585 11.1564 9.45553 11.1207C9.53521 11.085 9.60759 11.0327 9.66852 10.9668L14.009 6.27904C14.0701 6.21323 14.1185 6.13506 14.1516 6.04901C14.1846 5.96296 14.2017 5.87071 14.2017 5.77754C14.2017 5.68438 14.1846 5.59213 14.1516 5.50608C14.1185 5.42002 14.0701 5.34186 14.009 5.27605L9.66853 0.588308C9.60755 0.522451 9.53515 0.470212 9.45548 0.43457C9.37581 0.398928 9.29041 0.380583 9.20418 0.380583C9.11794 0.380583 9.03255 0.398928 8.95287 0.43457C8.8732 0.470212 8.80081 0.522451 8.73983 0.588308C8.67885 0.654166 8.63048 0.732351 8.59747 0.818398C8.56447 0.904444 8.54749 0.996669 8.54749 1.08981C8.54749 1.18294 8.56447 1.27516 8.59747 1.36121C8.63048 1.44726 8.67885 1.52544 8.73983 1.5913L11.954 5.06265L0.786737 5.06265C0.424479 5.06265 0.128085 5.38275 0.128085 5.77399C0.128085 6.16522 0.424478 6.48533 0.786737 6.48533Z" fill="#002642"/>
+                                    </svg>
+                                    </button>
                     </div>
     
              
@@ -1102,7 +1125,10 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
                             <br> <br> Sed magna nunc ut fames condimentum dictum. Libero egestas lectus facilisis aliquam.
                            </p>
 
-                            <button class="projekt__content-button">Till Github</button>
+                            <button class="projekt__content-button">Till Github <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.786737 6.48533L11.954 6.48533L8.73983 9.95667C8.48295 10.2341 8.48295 10.6894 8.73983 10.9668C8.80076 11.0327 8.87314 11.085 8.95282 11.1207C9.0325 11.1564 9.11791 11.1748 9.20418 11.1748C9.29044 11.1748 9.37585 11.1564 9.45553 11.1207C9.53521 11.085 9.60759 11.0327 9.66852 10.9668L14.009 6.27904C14.0701 6.21323 14.1185 6.13506 14.1516 6.04901C14.1846 5.96296 14.2017 5.87071 14.2017 5.77754C14.2017 5.68438 14.1846 5.59213 14.1516 5.50608C14.1185 5.42002 14.0701 5.34186 14.009 5.27605L9.66853 0.588308C9.60755 0.522451 9.53515 0.470212 9.45548 0.43457C9.37581 0.398928 9.29041 0.380583 9.20418 0.380583C9.11794 0.380583 9.03255 0.398928 8.95287 0.43457C8.8732 0.470212 8.80081 0.522451 8.73983 0.588308C8.67885 0.654166 8.63048 0.732351 8.59747 0.818398C8.56447 0.904444 8.54749 0.996669 8.54749 1.08981C8.54749 1.18294 8.56447 1.27516 8.59747 1.36121C8.63048 1.44726 8.67885 1.52544 8.73983 1.5913L11.954 5.06265L0.786737 5.06265C0.424479 5.06265 0.128085 5.38275 0.128085 5.77399C0.128085 6.16522 0.424478 6.48533 0.786737 6.48533Z" fill="#002642"/>
+                                </svg>
+                                </button>
                 </div>
 
 
@@ -1117,11 +1143,11 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
 
         <!-- KONTAKT -->
 
-        <div class="kontakt">
+        <div id="kontakt" class="kontakt">
             <div class="kontakt__inner">
                 <div class="kontakt__header">
 
-                    <h2 class="kontakt__header-title">Kontakt</h2>
+                    <h2  class="kontakt__header-title">Kontakt</h2>
                     <figure class="kontakt__header-icon">
                         <svg width="55" height="42" viewBox="0 0 55 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M54.3389 31.5849H46.1169L44.3493 41.6282L38.6393 31.5849H16.998V25.842H39.2386V7.80919H54.3389V31.5849ZM37.3658 0.228516V24.0043H15.7256L10.0145 34.0509L8.24574 24.0043H0.0249023V0.228516H37.3658ZM13.2199 16.2564C13.2199 15.0918 11.7852 14.5089 10.9461 15.3322C10.107 16.1555 10.7011 17.5634 11.8879 17.5634C12.6236 17.5634 13.22 16.9782 13.22 16.2564H13.2199ZM20.3539 16.2564C20.3459 15.094 18.9118 14.5195 18.0769 15.344C17.2422 16.1687 17.8373 17.5722 19.0219 17.5722C19.761 17.5722 20.3588 16.9817 20.3539 16.2564ZM27.4879 16.2564C27.4879 15.0918 26.0531 14.5089 25.2141 15.3322C24.3749 16.1555 24.9691 17.5634 26.1559 17.5634C26.8915 17.5634 27.4879 16.9782 27.4879 16.2564Z" fill="#002642"/>
@@ -1140,22 +1166,23 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
                     <div class="kontakt__content-form">
                         <form action="" method="post">
                             <label for="name">Namn</label>
-                            <input type="text" id="name" name="name" placeholder="Skriv ditt fullständiga namn" required>
+                            <input type="text" id="name" name="name" placeholder="Fullständigt namn" required>
                         
                             <label for="email">E-post</label>
-                            <input type="email" id="email" name="email" placeholder="Skriv din mejladress" required>
+                            <input type="email" id="email" name="email" placeholder="Mejladress" required>
                         
                             <label for="phone">Telefonnummer</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Skriv ditt telefonnummer">
+                            <input type="tel" id="phone" name="phone" placeholder="Telefonnummer">
                         
                             <label for="message">Meddelande</label>
-                            <textarea id="message" name="message" placeholder="Skriv in ditt meddelande" required></textarea>
+                            <textarea id="message" name="message" placeholder="Skriv ditt meddelande" required></textarea>
                         
                             <button type="submit">Skicka
 
-                                <svg width="23" height="14" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.42233 9.86355L18.6295 9.86355L13.6769 15.2124C13.2811 15.6399 13.2811 16.3413 13.6769 16.7688C13.7708 16.8704 13.8823 16.951 14.0051 17.006C14.1278 17.061 14.2595 17.0894 14.3924 17.0894C14.5253 17.0894 14.6569 17.061 14.7797 17.006C14.9025 16.951 15.014 16.8704 15.1079 16.7688L21.796 9.54569C21.8901 9.44429 21.9647 9.32384 22.0156 9.19125C22.0666 9.05865 22.0928 8.91651 22.0928 8.77296C22.0928 8.62941 22.0666 8.48727 22.0156 8.35467C21.9647 8.22208 21.8901 8.10163 21.796 8.00023L15.1079 0.777105C15.0139 0.675628 14.9024 0.595135 14.7796 0.540216C14.6568 0.485297 14.5253 0.457031 14.3924 0.457031C14.2595 0.457031 14.1279 0.485297 14.0052 0.540216C13.8824 0.595135 13.7708 0.675628 13.6769 0.777105C13.5829 0.878581 13.5084 0.999053 13.4575 1.13164C13.4067 1.26422 13.3805 1.40633 13.3805 1.54984C13.3805 1.69335 13.4067 1.83545 13.4575 1.96804C13.5084 2.10062 13.5829 2.22109 13.6769 2.32257L18.6295 7.67141L1.42233 7.67141C0.86414 7.67141 0.40744 8.16464 0.40744 8.76748C0.40744 9.37032 0.864139 9.86355 1.42233 9.86355Z" fill="#FCFCFC"/>
+                                <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.786737 6.48533L11.954 6.48533L8.73983 9.95667C8.48295 10.2341 8.48295 10.6894 8.73983 10.9668C8.80076 11.0327 8.87314 11.085 8.95282 11.1207C9.0325 11.1564 9.11791 11.1748 9.20418 11.1748C9.29044 11.1748 9.37585 11.1564 9.45553 11.1207C9.53521 11.085 9.60759 11.0327 9.66852 10.9668L14.009 6.27904C14.0701 6.21323 14.1185 6.13506 14.1516 6.04901C14.1846 5.96296 14.2017 5.87071 14.2017 5.77754C14.2017 5.68438 14.1846 5.59213 14.1516 5.50608C14.1185 5.42002 14.0701 5.34186 14.009 5.27605L9.66853 0.588308C9.60755 0.522451 9.53515 0.470212 9.45548 0.43457C9.37581 0.398928 9.29041 0.380583 9.20418 0.380583C9.11794 0.380583 9.03255 0.398928 8.95287 0.43457C8.8732 0.470212 8.80081 0.522451 8.73983 0.588308C8.67885 0.654166 8.63048 0.732351 8.59747 0.818398C8.56447 0.904444 8.54749 0.996669 8.54749 1.08981C8.54749 1.18294 8.56447 1.27516 8.59747 1.36121C8.63048 1.44726 8.67885 1.52544 8.73983 1.5913L11.954 5.06265L0.786737 5.06265C0.424479 5.06265 0.128085 5.38275 0.128085 5.77399C0.128085 6.16522 0.424478 6.48533 0.786737 6.48533Z" fill="#FCFCFC"/>
                                     </svg>
+                                    
                                     
                                     
                             </button>
@@ -1198,7 +1225,7 @@ Morbi facilisis cursus ipsum ultrices vitae risus ut montes. Orci in dui sed sem
                     </figure>
             </div>
 
-            <p class="footer__copyright">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p class="footer__copyright">© Rawaz Karim, 2024 Alla rättigheter reserverade.</p>
         </div>
     </footer>
   </body>
