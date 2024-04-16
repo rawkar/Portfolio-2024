@@ -83,7 +83,7 @@ body.dark {
     --color-dark: #FCFCFC; /* din ljusa färg */
     --color-light: #001524; /* din mörka färg */
     --color-primary:#FCFCFC;
-    --color-secondary-300: hsla(44, 94%, 58%, 0.182);
+    --color-secondary-300: #002742;
 }
 
 
@@ -168,6 +168,18 @@ blockquote {
     top: 0;
     transition: background-color 0.3s;
 
+    &__icons {
+
+        cursor: pointer;
+        opacity: 70%;
+
+        &:hover {
+            opacity: 100%;
+        }
+    }
+
+    
+
     &.scroll-active {
         background-color: #002742; 
     }
@@ -191,6 +203,7 @@ blockquote {
             font-family: var(--font-serif);
             position: relative;
             text-decoration: none;
+            cursor: pointer;
           }
 
           .menu__item:not(.menu__item-current):hover a {
@@ -213,6 +226,8 @@ blockquote {
             bottom: -.3rem;
             left: 0;
           }
+
+        
       }
    
       /* Hamburger icon and menu */
@@ -222,6 +237,7 @@ blockquote {
             border: none;
             background: none;
             flex-shrink: 0;
+            cursor: pointer;
         }
         
         .hamburger {
@@ -306,19 +322,67 @@ blockquote {
             gap: 2rem;
             margin-top: 6rem;
 
+            
+
+            
+
             svg {
 
                 max-height: 2rem;
+                margin-top: .9rem;
             }
 
             .social__item-resp {
                 list-style: none;
                 z-index: 299;
+                display: inline-block;
+                cursor: pointer;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+                transition: 400ms;   
+                &:after {
+
+                    
+                    pointer-events: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    content: '';
+                    box-sizing: content-box;
+                    box-shadow: 0 0 0 3px #f9c22e;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    transition: 600ms;
+                 
+            }
+        
+            &:hover {
+                background-color: var(--color-secondary-400);
+    
+                svg path {
+                    fill: #002742;
+                }
+        
+             
+              
+           
+        
+            }
+        
+            &:hover:after {
+                opacity: 1;
+                transform: scale(1.15);
+              }
+
+                
               }
               
-              .social__item-resp:hover svg path {
-                fill: var(--color-secondary-400) ;
-              }
+           
           }
           
         
@@ -438,9 +502,18 @@ blockquote {
             display: flex;
             align-items: center;
             gap: 1rem;
+            cursor: pointer;
+
+
+            &:hover svg {
+
+                transform: translateX(10px);
+            }
 
             svg {
                 margin-top: .2rem;
+                transition: all 0.4s;
+
             }
 
             svg path {
@@ -453,12 +526,11 @@ blockquote {
 
         button:hover {
 
-            border: 2px solid var(--color-secondary-400);
-            background-color: var(--color-secondary-400);
-            color: #002742;
+           
+             color: var(--color-secondary-400);
 
             svg path {
-              fill: #002742;
+                fill: var(--color-secondary-400);
            
             }
 
@@ -719,7 +791,7 @@ blockquote {
         
             svg {
                 max-height: 1.8rem;
-                margin-top: .8rem;
+                margin-top: .6rem;
             }
 
             svg path {
@@ -740,16 +812,62 @@ blockquote {
         .komptenser__content-icons {
 
             display: flex;
-            gap: var(--gap-large);
+            gap: var(--gap-small);
             flex-wrap: wrap;
 
             .komptenser__content-icon {
 
-                &:hover {
+
+
+                display: inline-block;
+            
+            
+                width: 80px;
+                height: 80px;
+                line-height: 84px;
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+             
+                //  background-color: rgba(220, 220, 220, 0.142);
+                transition: 400ms;   
+                
+                svg {
+                    opacity: 75%;
+                }
+                &:after {
+
                     
+                        pointer-events: none;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                        content: '';
+                        box-sizing: content-box;
+                        box-shadow: 0 0 0 3px #f9c22e;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        transition: 600ms;
+                     
+                }
+
+                &:hover {
+                    background-color: var(--color-secondary-400);
+
+                    svg {
+                        opacity: 100%;
+                    }
+                  
                
 
                 }
+
+                &:hover:after {
+                    opacity: 1;
+                    transform: scale(1.15);
+                  }
 
                
             }
@@ -759,13 +877,11 @@ blockquote {
 
                 height: 2.5rem;
                 width: 3.5rem;
-                opacity: 65%;
+              
+                margin-top: 1.3rem;
            
                 
-                &:hover {
-
-                    opacity: 100%;
-                }
+              
               
 
             
@@ -804,7 +920,6 @@ blockquote {
 
     padding-top: var(--section-gap);
     padding-bottom: var(--section-gap);
-
     position: relative;
   
 
@@ -912,10 +1027,12 @@ blockquote {
                 display: flex;
                 align-items: center;
                 gap: .7rem;
+                cursor: pointer;
 
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
                 svg {
                     margin-top: .1rem;
+                    transition: all 0.4s;
                    
                 }
 
@@ -925,12 +1042,17 @@ blockquote {
 
             button:hover {
 
-                background-color: var(--color-primary);
-                color: var(--color-light);
+                
+                color: #FCFCFC;
+
+                svg {
+                    transform: translateX(5px);
+                   
+               
+                }
 
                 svg path {
-
-                    fill: var(--color-light);
+                    fill: #FCFCFC;
                 }
 
 
@@ -1056,11 +1178,14 @@ blockquote {
                 color: #FCFCFC;
                 display: flex;
                 align-items: center;
-                gap: 1rem;
+                gap: .9rem;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                cursor: pointer;
 
                 svg {
                     margin-top: .3rem;
+                    transition: all 0.4s;
+                  
                 }
             }
 
@@ -1068,6 +1193,12 @@ blockquote {
 
                 background-color: #002742;
                 color: #f9c22e;
+
+
+                svg {
+
+                    transform: translateX(5px);
+                }
 
                 svg path {
 
@@ -1104,16 +1235,72 @@ blockquote {
 
        .footer__icons {
         display: flex;
-        gap: var(--gap-large);
+        gap: 1.2rem;
 
-        svg {
-            max-width: 2rem;
+
+        .footer__icon {
+
+            display: inline-block;
+            cursor: pointer;
+            
+            width: 40px;
+            height: 40px;
+           
+            border-radius: 50%;
+            text-align: center;
+            position: relative;
+         
+            // background-color: rgba(220, 220, 220, 0.142);
+            transition: 400ms;   
+            &:after {
+
+                    
+                pointer-events: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                content: '';
+                box-sizing: content-box;
+                box-shadow: 0 0 0 3px #f9c22e;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transition: 600ms;
+             
+        }
+    
+        &:hover {
+            background-color: var(--color-secondary-400);
+
+            svg path {
+                fill: #002742;
+            }
+    
+         
+          
+       
+    
+        }
+    
+        &:hover:after {
+            opacity: 1;
+            transform: scale(1.15);
+          }
+    
+    
         }
 
-        svg:hover path {
-            fill: var(--color-secondary-400) ;
-          }
-      
+       
+        
+
+        svg {
+            max-width: 1.5rem;
+            margin-top: -.3rem;
+          
+        }
+
+        
 
       
 
@@ -1173,9 +1360,7 @@ blockquote {
             width: 100%;
         }
 
-        .projekt__content-desc {
-            
-        }
+       
     }
 
     .projekt__content-case:nth-of-type(2) { /* Antaget att det är den andra instansen du vill påverka */
@@ -1194,6 +1379,7 @@ blockquote {
      
         margin-left: auto;
         margin-top: 0.4rem;
+       
     }
 
     .site-header #menu-button {
