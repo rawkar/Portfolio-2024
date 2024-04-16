@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rawaz Karim – portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="js/menuToggle.js" defer></script>
     <script src="js/siteScroll.js" defer></script>
     <script src="js/textExpand.js" defer></script>
@@ -168,7 +169,7 @@
               </figure>
           </div>
 
-          <div class="about__content">
+          <div data-aos="fade-up" class="about__content">
             <!-- Box 1 -->
             
 
@@ -196,7 +197,7 @@
 
 
             <!-- Box 2 -->
-            <div class="about__content-box">
+            <div data-aos="fade-up" class="about__content-box">
               <div class="about__content-header">
                 <h3 class="about__content-title">Webbutveckling</h3>
                 <figure class="about__content-icon">
@@ -215,7 +216,7 @@
             </div>
 
             <!-- Box 3 -->
-            <div class="about__content-box">
+            <div data-aos="fade-up" class="about__content-box">
               <div class="about__content-header">
                 <h3 class="about__content-title">Kommunikation</h3>
                 <figure class="about__content-icon">
@@ -940,7 +941,8 @@
 
               <div class="projekt__content-container">
               <!-- Projekt 1 -->
-              <div class="projekt__content-case">
+              <div   data-aos="slide-left"
+               class="projekt__content-case">
                 <figure class="projekt__content-image">
                   <img
                     src="/assets/images/projekt-1.png"
@@ -966,7 +968,8 @@
               </div>
 
                 <!-- Projekt 2 -->
-                <div class="projekt__content-case">
+                <div   data-aos="slide-right"
+               class="projekt__content-case">
                  
     
                     <div class="projekt__content-desc">
@@ -995,7 +998,9 @@
                   </div>
 
                     <!-- Projekt 3 -->
-              <div class="projekt__content-case">
+              <div   data-aos="slide-left"
+          
+               class="projekt__content-case">
                 <figure class="projekt__content-image">
                   <img
                     src="/assets/images/projekt-1.png"
@@ -1029,7 +1034,7 @@
 
         <!-- KONTAKT -->
 
-        <div id="kontakt" class="kontakt">
+        <div  id="kontakt" class="kontakt">
             <div class="kontakt__inner">
                 <div class="kontakt__header">
 
@@ -1043,7 +1048,7 @@
                   
                 </div>
 
-                <div class="kontakt__content">
+                <div data-aos="fade-up" class="kontakt__content">
                     <h5 class="kontakt__content-text">
                         Lorem ipsum dolor sit amet consectetur. Eros in porttitor nisi est aliquet odio. Arcu ut tortor imperdiet vitae.
                     </h5>
@@ -1113,5 +1118,9 @@
             <p class="footer__copyright">© Rawaz Karim, 2024 Alla rättigheter reserverade.</p>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

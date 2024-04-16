@@ -1,10 +1,22 @@
+// Lyssna på händelsen 'DOMContentLoaded' 
 document.addEventListener("DOMContentLoaded", function() {
+    // Välj alla element med klassen 'about__content-text'. 
     const textContainers = document.querySelectorAll('.about__content-text');
+
+    // Iterera över varje textContainer-element i listan.
     textContainers.forEach((textContainer) => {
-        const fullText = textContainer.innerHTML.trim(); // Använd `innerHTML` för att bevara HTML-element
+        // Hämta innehållet i textContainern, ta bort onödiga mellanrum före och efter texten med 'trim()'.
+        const fullText = textContainer.innerHTML.trim(); 
+
+        // Skapa ett nytt ankarelement (<a>) som ska fungera som "Läs mer"-länk.
         const readMoreLink = document.createElement('a');
+        
+        // Ange 'href'-attributet till 'javascript:void(0);' för att förhindra att sidan laddas om när användaren klickar på länken.
         readMoreLink.href = 'javascript:void(0);';
+        
+        // Tilldela en klass till den nya länken
         readMoreLink.className = 'read-more-link';
+
 
         // Skapa SVG för 'Läs mer'
         const readMoreSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -56,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.childNodes[2].nodeValue = " Se mindre  ";
             } else {
                 moreTextSpan.style.display = "none";
-                previewSpan.innerHTML = initialPreviewText + (fullText.length > 600 ? "..." : ""); // Visa förkortad text med ellipsis
+                previewSpan.innerHTML = initialPreviewText + (fullText.length > 600 ? "..." : ""); // Visa förkortad text 
                 this.replaceChild(readMoreSvg, seeLessSvg);
                 readMoreSvg.style.display = 'inline';
                 seeLessSvg.style.display = 'none';

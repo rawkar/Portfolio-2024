@@ -1,23 +1,36 @@
+// Välj alla ankarelement
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  // Lägg till en händelselyssnare för 'click' händelsen på varje sådant ankarelement.
+  anchor.addEventListener('click', function (e) {
+    
       e.preventDefault();
+
+      // Hitta det målelement som ankaret länkar till
       let target = document.querySelector(this.getAttribute('href'));
-      let headerOffset = 120;  // Höjden på din header
+
+      // Definiera en offset för header
+      let headerOffset = 120; // höjden på header
+
+      // Hämta y-positionen för målelementet i sidan
       let elementPosition = target.offsetTop;
+
+      // Beräkna den faktiska positionen 
       let offsetPosition = elementPosition - headerOffset;
-  
+
+      // Scrolla till beräknad position.
       window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
+          top: offsetPosition, 
+          behavior: 'smooth' 
       });
-    });
   });
-  
+});
+
 
 
   // Funktion för att hantera klick på menyval
 const updateCurrentMenuItem = () => {
-    const menuItems = document.querySelectorAll('.menu__item a'); // Hämta alla menyval
+  // Hämta alla menyval
+    const menuItems = document.querySelectorAll('.menu__item a'); 
     menuItems.forEach(item => {
       item.addEventListener('click', function() {
         // Ta bort nuvarande klass från alla menyval
