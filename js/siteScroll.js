@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       let target = document.querySelector(this.getAttribute('href'));
 
       // Definiera en offset för header
-      let headerOffset = 120; // höjden på header
+      let headerOffset = 40; // höjden på header
 
       // Hämta y-positionen för målelementet i sidan
       let elementPosition = target.offsetTop;

@@ -481,7 +481,7 @@ blockquote {
 .about {
   position: relative;
   padding-bottom: var(--section-gap);
-  margin-top: var(--section-gap);
+  padding-top: var(--section-gap);
 
   &::before,
   &::after {
@@ -519,7 +519,7 @@ blockquote {
     display: flex;
     gap: var(--gap-small);
     align-items: center;
-    margin-bottom: var(--gap-content);
+    margin-bottom: var(--gap-large);
 
     svg {
       max-height: 2rem;
@@ -534,9 +534,11 @@ blockquote {
 
   &__content {
     &-box {
-      margin-top: var(--gap-content);
-
       position: relative;
+
+      &:not(:first-child) {
+        margin-top: var(--gap-large);
+      }
 
       &::before {
         content: "";
@@ -861,7 +863,8 @@ blockquote {
 //KONTAKT
 
 .kontakt {
-  margin-top: var(--section-gap);
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
 
   &__header {
     display: flex;
@@ -977,7 +980,6 @@ blockquote {
   background-color: #002742;
   color: #fcfcfc;
   padding: 3rem 2rem 0.5rem;
-  margin-top: var(--section-gap);
 
   &__inner {
     display: flex;
@@ -1075,8 +1077,8 @@ blockquote {
   }
 }
 
-/* 900px or less */
-@media screen and (max-width: 900px) {
+/* 1024px or less */
+@media screen and (max-width: 1024px) {
   .menu {
     display: none;
   }
@@ -1089,7 +1091,10 @@ blockquote {
     display: block;
     margin-left: var(--gap-large);
   }
+}
 
+/* 900px or less */
+@media screen and (max-width: 900px) {
   .hero__inner {
     h1 {
       font-size: 2.8rem;
@@ -1150,6 +1155,13 @@ blockquote {
 
 /* 600px or less */
 @media screen and (max-width: 600px) {
+  .about,
+  .kompetenser,
+  .projekt,
+  .kontakt {
+    padding: 5rem 0;
+  }
+
   .about__content-header {
     display: flex;
     align-items: center;
@@ -1170,6 +1182,33 @@ blockquote {
   .footer__inner {
     h5 {
       font-size: var(--font-size-1);
+    }
+  }
+}
+
+/* 410px or less */
+@media screen and (max-width: 410px) {
+  .hero__inner {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    padding-top: 5rem;
+
+    img {
+      max-width: 17rem;
+    }
+
+    h1 {
+      font-size: 2.7rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    p {
+      max-width: 17rem;
+      font-size: 0.8rem;
     }
   }
 }

@@ -16,7 +16,7 @@
   --color-secondary-300: hsla(44, 94%, 58%, 0.25);
   --color-secondary-400: #f9c22e;
   --color-dark: #001524;
-  --color-light: #FCFCFC;
+  --color-light: #fcfcfc;
   --color-gray: #364156;
   --border-radius: 5px;
   --padding-content: 2rem;
@@ -51,18 +51,24 @@ img {
 }
 
 body.dark {
-  --color-dark: #FCFCFC; /* din ljusa färg */
+  --color-dark: #fcfcfc; /* din ljusa färg */
   --color-light: #001524; /* din mörka färg */
-  --color-primary:#FCFCFC;
+  --color-primary: #fcfcfc;
   --color-secondary-300: #002742;
 }
 
-html, body {
+html,
+body {
   font-family: var(--font-sans);
   font-size: var(--font-size);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   margin: 0;
 }
@@ -142,7 +148,7 @@ blockquote {
   gap: var(--gap-large);
 }
 .site-header .menu__list .menu__item a {
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-weight: 500;
   font-size: var(--font-size-2);
   font-family: var(--font-serif);
@@ -173,7 +179,7 @@ blockquote {
   cursor: pointer;
 }
 .site-header .hamburger {
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   width: 20px;
   height: 3px;
   position: relative;
@@ -184,7 +190,7 @@ blockquote {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   left: 0;
   top: -8px;
   transition: top 0.2s 0.2s, transform 0.2s;
@@ -301,7 +307,7 @@ blockquote {
   background: url(/assets/images/bg-hero.png);
   background-size: cover;
   height: 93vh;
-  color: #FCFCFC;
+  color: #fcfcfc;
   position: relative;
   margin-top: 70px;
 }
@@ -344,14 +350,14 @@ blockquote {
   color: var(--color-secondary-400);
 }
 .hero__content-slash {
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 .hero__content-excerpt {
   max-width: 30rem;
 }
 .hero__content a {
   text-decoration: none;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 .hero__content button {
   margin-top: var(--gap-small);
@@ -363,7 +369,7 @@ blockquote {
   border: 2px solid var(--color-secondary-400);
   padding: 0.8rem 1.5rem;
   background-color: transparent;
-  color: #FCFCFC;
+  color: #fcfcfc;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -377,7 +383,7 @@ blockquote {
   transition: all 0.4s;
 }
 .hero__content button svg path {
-  fill: #FCFCFC;
+  fill: #fcfcfc;
 }
 .hero__content button:hover {
   color: var(--color-secondary-400);
@@ -403,7 +409,7 @@ blockquote {
 .about {
   position: relative;
   padding-bottom: var(--section-gap);
-  margin-top: var(--section-gap);
+  padding-top: var(--section-gap);
 }
 .about::before, .about::after {
   content: "";
@@ -436,7 +442,7 @@ blockquote {
   display: flex;
   gap: var(--gap-small);
   align-items: center;
-  margin-bottom: var(--gap-content);
+  margin-bottom: var(--gap-large);
 }
 .about__header svg {
   max-height: 2rem;
@@ -447,8 +453,10 @@ blockquote {
   stroke: var(--color-light);
 }
 .about__content-box {
-  margin-top: var(--gap-content);
   position: relative;
+}
+.about__content-box:not(:first-child) {
+  margin-top: var(--gap-large);
 }
 .about__content-box::before {
   content: "";
@@ -499,7 +507,7 @@ blockquote {
   display: none;
 }
 .about .read-more-link {
-  color: var(--color-primary); /* Optional: gör så att länkfärgen ärver från dess förälder */
+  color: var(--color-primary);
   cursor: pointer;
   text-decoration: none;
   opacity: 75%;
@@ -701,17 +709,18 @@ blockquote {
   transition: all 0.4s;
 }
 .projekt__content-case .projekt__content-desc button:hover {
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 .projekt__content-case .projekt__content-desc button:hover svg {
   transform: translateX(5px);
 }
 .projekt__content-case .projekt__content-desc button:hover svg path {
-  fill: #FCFCFC;
+  fill: #fcfcfc;
 }
 
 .kontakt {
-  margin-top: var(--section-gap);
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
 }
 .kontakt__header {
   display: flex;
@@ -783,7 +792,7 @@ blockquote {
   border: none;
   padding: 0.7rem 1.3rem;
   background-color: #002742;
-  color: #FCFCFC;
+  color: #fcfcfc;
   display: flex;
   align-items: center;
   gap: 0.9rem;
@@ -807,9 +816,8 @@ blockquote {
 
 .footer {
   background-color: #002742;
-  color: #FCFCFC;
+  color: #fcfcfc;
   padding: 3rem 2rem 0.5rem;
-  margin-top: var(--section-gap);
 }
 .footer__inner {
   display: flex;
@@ -882,12 +890,12 @@ blockquote {
     flex-basis: auto;
     width: 100%;
   }
-  .projekt__content-case:nth-of-type(2) { /* Antaget att det är den andra instansen du vill påverka */
+  .projekt__content-case:nth-of-type(2) {
     flex-direction: column-reverse;
   }
 }
-/* 900px or less */
-@media screen and (max-width: 900px) {
+/* 1024px or less */
+@media screen and (max-width: 1024px) {
   .menu {
     display: none;
   }
@@ -899,6 +907,9 @@ blockquote {
     display: block;
     margin-left: var(--gap-large);
   }
+}
+/* 900px or less */
+@media screen and (max-width: 900px) {
   .hero__inner h1 {
     font-size: 2.8rem;
   }
@@ -945,6 +956,12 @@ blockquote {
 }
 /* 600px or less */
 @media screen and (max-width: 600px) {
+  .about,
+  .kompetenser,
+  .projekt,
+  .kontakt {
+    padding: 5rem 0;
+  }
   .about__content-header {
     display: flex;
     align-items: center;
@@ -961,6 +978,27 @@ blockquote {
   }
   .footer__inner h5 {
     font-size: var(--font-size-1);
+  }
+}
+/* 410px or less */
+@media screen and (max-width: 410px) {
+  .hero__inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .hero__inner img {
+    max-width: 17rem;
+  }
+  .hero__inner h1 {
+    font-size: 2.7rem;
+  }
+  .hero__inner h3 {
+    font-size: 1rem;
+  }
+  .hero__inner p {
+    max-width: 17rem;
+    font-size: 0.8rem;
   }
 }
 
