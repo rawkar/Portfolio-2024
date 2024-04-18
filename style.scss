@@ -130,6 +130,10 @@ blockquote {
 
 //HEADER
 
+.container {
+  overflow: hidden;
+}
+
 .site-header {
   background-color: #001524;
   display: flex;
@@ -601,12 +605,15 @@ blockquote {
 
   .read-more-link {
     color: var(--color-primary);
-    cursor: pointer;
-    text-decoration: none;
-    opacity: 75%;
+    padding: 0 0.1rem;
 
-    svg path {
-      fill: var(--color-dark);
+    cursor: pointer;
+    // text-decoration: none;
+
+    border-radius: 5px;
+
+    p {
+      padding: 2rem;
     }
 
     &:hover {

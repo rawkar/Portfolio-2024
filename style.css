@@ -115,6 +115,10 @@ blockquote {
   line-height: var(--line-height);
 }
 
+.container {
+  overflow: hidden;
+}
+
 .site-header {
   background-color: #001524;
   display: flex;
@@ -508,12 +512,12 @@ blockquote {
 }
 .about .read-more-link {
   color: var(--color-primary);
+  padding: 0 0.1rem;
   cursor: pointer;
-  text-decoration: none;
-  opacity: 75%;
+  border-radius: 5px;
 }
-.about .read-more-link svg path {
-  fill: var(--color-dark);
+.about .read-more-link p {
+  padding: 2rem;
 }
 .about .read-more-link:hover {
   opacity: 100%;
