@@ -113,7 +113,19 @@
     <!-- HERO -->
 
     <section class="hero">
+
+
+
+      <div class="hero__bg">
+        <div class="hero__bg-content">
+          <canvas id="universe"></canvas>
+        </div>
+
+      </div>
+
+
       <div class="hero__inner">
+
         <!-- Hero content -->
         <div class="hero__content">
           <h1 class="hero__content-title">Rawaz Karim</h1>
@@ -162,7 +174,11 @@
 
         </a>
       </div>
+
+
     </section>
+
+    <!-- MAIN CONTENT -->
 
     <section class="main">
       <div class="main__inner">
@@ -173,14 +189,7 @@
 
             <h2 class="about__header-title">Om mig</h2>
 
-            <figure class="about__header-icon">
-              <svg width="46" height="40" viewBox="0 0 46 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24.8752 16.7869H21.1252V13.1203H24.8752M24.8752 31.4536H21.1252V20.4536H24.8752M23.0002 3.95361C20.538 3.95361 18.0998 4.42782 15.8249 5.34916C13.5501 6.27049 11.4831 7.62092 9.74199 9.32332C6.22568 12.7615 4.25024 17.4246 4.25024 22.2869C4.25024 27.1492 6.22568 31.8124 9.74199 35.2506C11.4831 36.953 13.5501 38.3034 15.8249 39.2247C18.0998 40.1461 20.538 40.6203 23.0002 40.6203C27.9731 40.6203 32.7422 38.6887 36.2585 35.2506C39.7748 31.8124 41.7502 27.1492 41.7502 22.2869C41.7502 19.8794 41.2653 17.4954 40.323 15.2711C39.3807 13.0468 37.9996 11.0257 36.2585 9.32332C34.5174 7.62092 32.4504 6.27049 30.1756 5.34916C27.9007 4.42782 25.4625 3.95361 23.0002 3.95361Z"
-                  fill="#002642" />
-              </svg>
 
-            </figure>
           </div>
 
           <div data-aos="fade-up" class="about__content">
@@ -324,14 +333,7 @@
           <div class="kompetenser__header">
 
             <h2 class="about__header-title">Kompetenser</h2>
-            <figure class="kompetenser__header-icon">
-              <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M26.2498 23.3334H23.3332V21.875H11.6665V23.3334H8.74984V21.875H2.9165V29.1667H32.0832V21.875H26.2498V23.3334ZM29.1665 11.6667H24.7915V8.75004C24.7915 7.14587 23.479 5.83337 21.8748 5.83337H13.1248C11.5207 5.83337 10.2082 7.14587 10.2082 8.75004V11.6667H5.83317C4.229 11.6667 2.9165 12.9792 2.9165 14.5834V20.4167H8.74984V17.5H11.6665V20.4167H23.3332V17.5H26.2498V20.4167H32.0832V14.5834C32.0832 12.9792 30.7707 11.6667 29.1665 11.6667ZM21.8748 11.6667H13.1248V8.75004H21.8748V11.6667Z"
-                  fill="#002642" />
-              </svg>
 
-            </figure>
 
 
           </div>
@@ -703,21 +705,9 @@
             <div class="projekt__header">
               <h2 class="projekt__header-title">Projekt
               </h2>
-              <figure class="projekt__header-icon">
-                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_291_1068)">
-                    <path
-                      d="M27.7083 5.83325C28.4819 5.83325 29.2237 6.14054 29.7707 6.68752C30.3177 7.2345 30.625 7.97637 30.625 8.74992V26.2499C30.625 27.0235 30.3177 27.7653 29.7707 28.3123C29.2237 28.8593 28.4819 29.1666 27.7083 29.1666H7.29167C6.51812 29.1666 5.77625 28.8593 5.22927 28.3123C4.68229 27.7653 4.375 27.0235 4.375 26.2499V8.74992C4.375 7.97637 4.68229 7.2345 5.22927 6.68752C5.77625 6.14054 6.51812 5.83325 7.29167 5.83325H27.7083ZM27.7083 14.5833H7.29167V24.7916C7.29171 25.1488 7.42285 25.4935 7.66021 25.7605C7.89757 26.0274 8.22463 26.1979 8.57937 26.2397L8.75 26.2499H26.25C26.6072 26.2499 26.9519 26.1187 27.2189 25.8814C27.4858 25.644 27.6563 25.317 27.6981 24.9622L27.7083 24.7916V14.5833ZM8.75 8.74992C8.36323 8.74992 7.99229 8.90356 7.7188 9.17705C7.44531 9.45055 7.29167 9.82148 7.29167 10.2083C7.29167 10.595 7.44531 10.966 7.7188 11.2394C7.99229 11.5129 8.36323 11.6666 8.75 11.6666C9.13677 11.6666 9.50771 11.5129 9.7812 11.2394C10.0547 10.966 10.2083 10.595 10.2083 10.2083C10.2083 9.82148 10.0547 9.45055 9.7812 9.17705C9.50771 8.90356 9.13677 8.74992 8.75 8.74992ZM13.125 8.74992C12.7382 8.74992 12.3673 8.90356 12.0938 9.17705C11.8203 9.45055 11.6667 9.82148 11.6667 10.2083C11.6667 10.595 11.8203 10.966 12.0938 11.2394C12.3673 11.5129 12.7382 11.6666 13.125 11.6666C13.5118 11.6666 13.8827 11.5129 14.1562 11.2394C14.4297 10.966 14.5833 10.595 14.5833 10.2083C14.5833 9.82148 14.4297 9.45055 14.1562 9.17705C13.8827 8.90356 13.5118 8.74992 13.125 8.74992ZM17.5 8.74992C17.1132 8.74992 16.7423 8.90356 16.4688 9.17705C16.1953 9.45055 16.0417 9.82148 16.0417 10.2083C16.0417 10.595 16.1953 10.966 16.4688 11.2394C16.7423 11.5129 17.1132 11.6666 17.5 11.6666C17.8868 11.6666 18.2577 11.5129 18.5312 11.2394C18.8047 10.966 18.9583 10.595 18.9583 10.2083C18.9583 9.82148 18.8047 9.45055 18.5312 9.17705C18.2577 8.90356 17.8868 8.74992 17.5 8.74992Z"
-                      fill="#002642" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_291_1068">
-                      <rect width="35" height="35" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
 
-              </figure>
+
+
             </div>
 
             <div class="projekt__content">
@@ -728,10 +718,14 @@
 
               <div class="projekt__content-container">
                 <!-- Projekt 1 -->
-                <div data-aos="slide-left" class="projekt__content-case">
+                <div data-aos="fade-up" class="projekt__content-case">
                   <figure class="projekt__content-image">
-                    <img src="/assets/images/projekt-1.png" alt="Dator med webbprojekt" />
+                    <picture>
+                      <source media="(max-width: 1200px)" srcset="/assets/images/ipad_2.png">
+                      <img src="/assets/images/projekt-1.png" alt="Dator med webbprojekt" />
+                    </picture>
                   </figure>
+
 
                   <div class="projekt__content-desc">
                     <h3 class="projekt__content-title">Lorem ipsum dolor sit
@@ -756,7 +750,7 @@
                 </div>
 
                 <!-- Projekt 2 -->
-                <div data-aos="slide-right" class="projekt__content-case">
+                <div data-aos="fade-up" class="projekt__content-case">
 
 
                   <div class="projekt__content-desc">
@@ -781,16 +775,24 @@
 
 
                   <figure class="projekt__content-image">
-                    <img src="/assets/images/projekt-2.png" alt="Dator med webbprojekt" />
+                    <picture>
+                      <source media="(max-width: 1200px)" srcset="/assets/images/ipad.png">
+                      <img src="/assets/images/projekt-2.png" alt="Dator med webbprojekt" />
+                    </picture>
                   </figure>
+
 
                 </div>
 
                 <!-- Projekt 3 -->
-                <div data-aos="slide-left" class="projekt__content-case">
+                <div data-aos="fade-up" class="projekt__content-case">
                   <figure class="projekt__content-image">
-                    <img src="/assets/images/projekt-1.png" alt="Dator med webbprojekt" />
+                    <picture>
+                      <source media="(max-width: 1200px)" srcset="/assets/images/ipad_2.png">
+                      <img src="/assets/images/projekt-1.png" alt="Dator med webbprojekt" />
+                    </picture>
                   </figure>
+
 
                   <div class="projekt__content-desc">
                     <h3 class="projekt__content-title">Lorem ipsum dolor sit
@@ -828,13 +830,7 @@
             <div class="kontakt__header">
 
               <h2 class="kontakt__header-title">Kontakt</h2>
-              <figure class="kontakt__header-icon">
-                <svg width="36" height="35" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M18.2498 1.82294C9.59171 1.82294 2.57275 8.8419 2.57275 17.5C2.57275 20.2067 3.25963 22.7573 4.46859 24.9813L3.32088 31.1544C3.28858 31.3288 3.29921 31.5085 3.35183 31.6779C3.40446 31.8474 3.49751 32.0015 3.62295 32.1269C3.7484 32.2524 3.90248 32.3454 4.07191 32.398C4.24133 32.4507 4.42102 32.4613 4.59546 32.429L10.7686 31.2798C13.0641 32.5287 15.6366 33.1811 18.2498 33.1771C26.908 33.1771 33.9269 26.1581 33.9269 17.5C33.9269 8.8419 26.908 1.82294 18.2498 1.82294ZM25.5415 15.6771C25.058 15.6771 24.5944 15.8692 24.2525 16.211C23.9106 16.5529 23.7186 17.0166 23.7186 17.5C23.7186 17.9835 23.9106 18.4472 24.2525 18.789C24.5944 19.1309 25.058 19.3229 25.5415 19.3229C26.025 19.3229 26.4886 19.1309 26.8305 18.789C27.1724 18.4472 27.3644 17.9835 27.3644 17.5C27.3644 17.0166 27.1724 16.5529 26.8305 16.211C26.4886 15.8692 26.025 15.6771 25.5415 15.6771ZM16.4269 17.5C16.4269 17.0166 16.619 16.5529 16.9608 16.211C17.3027 15.8692 17.7664 15.6771 18.2498 15.6771C18.7333 15.6771 19.197 15.8692 19.5388 16.211C19.8807 16.5529 20.0728 17.0166 20.0728 17.5C20.0728 17.9835 19.8807 18.4472 19.5388 18.789C19.197 19.1309 18.7333 19.3229 18.2498 19.3229C17.7664 19.3229 17.3027 19.1309 16.9608 18.789C16.619 18.4472 16.4269 17.9835 16.4269 17.5ZM10.9582 15.6771C10.4747 15.6771 10.011 15.8692 9.66917 16.211C9.32731 16.5529 9.13525 17.0166 9.13525 17.5C9.13525 17.9835 9.32731 18.4472 9.66917 18.789C10.011 19.1309 10.4747 19.3229 10.9582 19.3229C11.4416 19.3229 11.9053 19.1309 12.2472 18.789C12.589 18.4472 12.7811 17.9835 12.7811 17.5C12.7811 17.0166 12.589 16.5529 12.2472 16.211C11.9053 15.8692 11.4416 15.6771 10.9582 15.6771Z"
-                    fill="#002642" />
-                </svg>
-              </figure>
+
 
 
             </div>
@@ -925,10 +921,16 @@
     </footer>
 
   </div>
+
+  <!-- scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+
+
+  <script src="/js/app.js"></script>
 </body>
 
 </html>

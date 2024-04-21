@@ -359,35 +359,22 @@ blockquote {
 }
 
 .hero {
-  background: url(/assets/images/bg-hero.png);
+  // background: url(/assets/images/bg-hero.png);
+  background-color: #001524;
   background-size: cover;
   height: 93vh;
   color: #fcfcfc;
   position: relative;
   margin-top: 70px;
 
-  &__arrow {
+  #universe {
+    width: 100%;
+    height: 100%;
+
     position: absolute;
-    bottom: 25px;
-    left: 50%;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-  }
 
-  &__arrow:hover {
-    cursor: pointer;
-    animation-name: bounce;
-    -moz-animation-name: bounce;
-  }
-
-  &__arrow:hover path {
-    fill: #f9c22e;
+    z-index: 10;
+    opacity: 100%;
   }
 
   &__inner {
@@ -406,6 +393,7 @@ blockquote {
 
   &__content {
     padding-top: 2rem;
+    z-index: 25;
 
     &-subheader {
       color: var(--color-secondary-400);
@@ -437,6 +425,7 @@ blockquote {
       align-items: center;
       gap: 1rem;
       cursor: pointer;
+      z-index: 50;
 
       &:hover svg {
         transform: translateX(10px);
@@ -463,6 +452,32 @@ blockquote {
 
   &__portrait {
     margin: 0 4rem;
+    z-index: 25;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    z-index: 15;
+
+    &:hover {
+      cursor: pointer;
+      animation-name: bounce;
+      -moz-animation-name: bounce;
+    }
+
+    &:hover path {
+      fill: #f9c22e;
+    }
   }
 }
 
@@ -524,16 +539,6 @@ blockquote {
     gap: var(--gap-small);
     align-items: center;
     margin-bottom: var(--gap-large);
-
-    svg {
-      max-height: 2rem;
-      margin-top: 0.8rem;
-    }
-
-    svg path {
-      fill: var(--color-primary);
-      stroke: var(--color-light);
-    }
   }
 
   &__content {
@@ -605,10 +610,10 @@ blockquote {
 
   .read-more-link {
     color: var(--color-primary);
-    padding: 0 0.1rem;
+    padding: 0.1rem 0.2rem;
 
     cursor: pointer;
-    // text-decoration: none;
+    text-decoration: none;
 
     border-radius: 5px;
 
@@ -666,16 +671,6 @@ blockquote {
     gap: var(--gap-small);
     align-items: center;
     margin-bottom: var(--gap-large);
-
-    svg {
-      max-height: 1.8rem;
-      margin-top: 0.6rem;
-    }
-
-    svg path {
-      fill: var(--color-primary);
-      stroke: var(--color-primary);
-    }
   }
   &__content {
     max-width: 65rem;
@@ -794,20 +789,11 @@ blockquote {
     gap: var(--gap-small);
     align-items: center;
     margin-bottom: var(--gap-large);
-
-    svg {
-      max-height: 1.9rem;
-      margin-top: 0.8rem;
-    }
-
-    svg path {
-      fill: var(--color-primary);
-    }
   }
 
   &__content {
     &-text {
-      margin-bottom: var(--gap-large);
+      margin-bottom: 5rem;
       max-width: 64rem;
     }
 
@@ -829,6 +815,9 @@ blockquote {
 
     .projekt__content-desc {
       flex: 4 1 0;
+      .projekt__content-excerpt {
+        max-width: 40rem;
+      }
 
       button {
         width: 8rem;
@@ -878,19 +867,9 @@ blockquote {
     gap: var(--gap-small);
     align-items: center;
     margin-bottom: var(--gap-large);
-
-    svg {
-      max-height: 1.5rem;
-      margin-top: 0.8rem;
-    }
-
-    svg path {
-      fill: var(--color-primary);
-    }
   }
 
   &__content {
-    // padding-left:5.5rem;
     max-width: 64rem;
 
     &-text {
@@ -917,6 +896,7 @@ blockquote {
       #message::placeholder {
         font-family: var(--font-sans);
         padding-left: 0.5rem;
+        color: var(--color-primary);
       }
 
       textarea {
@@ -924,10 +904,14 @@ blockquote {
         border: none;
         height: 10rem;
         margin-bottom: var(--gap-small);
+        background-color: var(--color-light);
+        color: var(--color-primary);
+        padding-left: 1.2rem !important;
+        padding-top: 0.4rem;
 
         &::placeholder {
-          padding-left: 1.2rem !important;
-          padding-top: 0.4rem;
+          // padding-left: 1.2rem !important;
+          // padding-top: 0.4rem;
           font-family: var(--font-sans) !important;
         }
       }
@@ -942,6 +926,7 @@ blockquote {
         border: none;
         padding: 1rem;
         max-width: 40rem;
+        background-color: var(--color-light);
       }
 
       button {
@@ -1012,7 +997,6 @@ blockquote {
         text-align: center;
         position: relative;
 
-        // background-color: rgba(220, 220, 220, 0.142);
         transition: 400ms;
         &:after {
           pointer-events: none;
@@ -1134,7 +1118,7 @@ blockquote {
     flex-direction: column-reverse;
     align-items: center;
 
-    padding-top: 5rem;
+    padding-top: 8rem;
 
     img {
       max-width: 17rem;
@@ -1193,13 +1177,23 @@ blockquote {
   }
 }
 
+/* 455px or less */
+@media screen and (max-width: 455px) {
+  .komptenser__content-icons {
+    display: flex;
+    gap: 0.1rem !important;
+
+    flex-wrap: wrap;
+  }
+}
+
 /* 410px or less */
 @media screen and (max-width: 410px) {
   .hero__inner {
     flex-direction: column-reverse;
     align-items: center;
 
-    padding-top: 5rem;
+    padding-top: 6rem;
 
     img {
       max-width: 17rem;
@@ -1217,5 +1211,9 @@ blockquote {
       max-width: 17rem;
       font-size: 0.8rem;
     }
+  }
+
+  .footer__copyright {
+    font-size: 0.8rem;
   }
 }

@@ -308,33 +308,19 @@ blockquote {
   }
 }
 .hero {
-  background: url(/assets/images/bg-hero.png);
+  background-color: #001524;
   background-size: cover;
   height: 93vh;
   color: #fcfcfc;
   position: relative;
   margin-top: 70px;
 }
-.hero__arrow {
+.hero #universe {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 25px;
-  left: 50%;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
-.hero__arrow:hover {
-  cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
-}
-.hero__arrow:hover path {
-  fill: #f9c22e;
+  z-index: 10;
+  opacity: 100%;
 }
 .hero__inner {
   display: flex;
@@ -349,6 +335,7 @@ blockquote {
 }
 .hero__content {
   padding-top: 2rem;
+  z-index: 25;
 }
 .hero__content-subheader {
   color: var(--color-secondary-400);
@@ -378,6 +365,7 @@ blockquote {
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  z-index: 50;
 }
 .hero__content button:hover svg {
   transform: translateX(10px);
@@ -397,6 +385,29 @@ blockquote {
 }
 .hero__portrait {
   margin: 0 4rem;
+  z-index: 25;
+}
+.hero__arrow {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  z-index: 15;
+}
+.hero__arrow:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+.hero__arrow:hover path {
+  fill: #f9c22e;
 }
 
 .main {
@@ -447,14 +458,6 @@ blockquote {
   gap: var(--gap-small);
   align-items: center;
   margin-bottom: var(--gap-large);
-}
-.about__header svg {
-  max-height: 2rem;
-  margin-top: 0.8rem;
-}
-.about__header svg path {
-  fill: var(--color-primary);
-  stroke: var(--color-light);
 }
 .about__content-box {
   position: relative;
@@ -512,8 +515,9 @@ blockquote {
 }
 .about .read-more-link {
   color: var(--color-primary);
-  padding: 0 0.1rem;
+  padding: 0.1rem 0.2rem;
   cursor: pointer;
+  text-decoration: none;
   border-radius: 5px;
 }
 .about .read-more-link p {
@@ -560,14 +564,6 @@ blockquote {
   gap: var(--gap-small);
   align-items: center;
   margin-bottom: var(--gap-large);
-}
-.kompetenser__header svg {
-  max-height: 1.8rem;
-  margin-top: 0.6rem;
-}
-.kompetenser__header svg path {
-  fill: var(--color-primary);
-  stroke: var(--color-primary);
 }
 .kompetenser__content {
   max-width: 65rem;
@@ -664,15 +660,8 @@ blockquote {
   align-items: center;
   margin-bottom: var(--gap-large);
 }
-.projekt__header svg {
-  max-height: 1.9rem;
-  margin-top: 0.8rem;
-}
-.projekt__header svg path {
-  fill: var(--color-primary);
-}
 .projekt__content-text {
-  margin-bottom: var(--gap-large);
+  margin-bottom: 5rem;
   max-width: 64rem;
 }
 .projekt__content-container {
@@ -691,6 +680,9 @@ blockquote {
 }
 .projekt__content-case .projekt__content-desc {
   flex: 4 1 0;
+}
+.projekt__content-case .projekt__content-desc .projekt__content-excerpt {
+  max-width: 40rem;
 }
 .projekt__content-case .projekt__content-desc button {
   width: 8rem;
@@ -732,13 +724,6 @@ blockquote {
   align-items: center;
   margin-bottom: var(--gap-large);
 }
-.kontakt__header svg {
-  max-height: 1.5rem;
-  margin-top: 0.8rem;
-}
-.kontakt__header svg path {
-  fill: var(--color-primary);
-}
 .kontakt__content {
   max-width: 64rem;
 }
@@ -765,16 +750,19 @@ blockquote {
 .kontakt__content form #message::placeholder {
   font-family: var(--font-sans);
   padding-left: 0.5rem;
+  color: var(--color-primary);
 }
 .kontakt__content form textarea {
   border-radius: var(--border-radius);
   border: none;
   height: 10rem;
   margin-bottom: var(--gap-small);
-}
-.kontakt__content form textarea::placeholder {
+  background-color: var(--color-light);
+  color: var(--color-primary);
   padding-left: 1.2rem !important;
   padding-top: 0.4rem;
+}
+.kontakt__content form textarea::placeholder {
   font-family: var(--font-sans) !important;
 }
 .kontakt__content form label {
@@ -786,6 +774,7 @@ blockquote {
   border: none;
   padding: 1rem;
   max-width: 40rem;
+  background-color: var(--color-light);
 }
 .kontakt__content form button {
   width: 8rem;
@@ -938,7 +927,7 @@ blockquote {
   .hero__inner {
     flex-direction: column-reverse;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 8rem;
   }
   .hero__inner img {
     max-width: 17rem;
@@ -984,12 +973,20 @@ blockquote {
     font-size: var(--font-size-1);
   }
 }
+/* 455px or less */
+@media screen and (max-width: 455px) {
+  .komptenser__content-icons {
+    display: flex;
+    gap: 0.1rem !important;
+    flex-wrap: wrap;
+  }
+}
 /* 410px or less */
 @media screen and (max-width: 410px) {
   .hero__inner {
     flex-direction: column-reverse;
     align-items: center;
-    padding-top: 5rem;
+    padding-top: 6rem;
   }
   .hero__inner img {
     max-width: 17rem;
@@ -1002,6 +999,9 @@ blockquote {
   }
   .hero__inner p {
     max-width: 17rem;
+    font-size: 0.8rem;
+  }
+  .footer__copyright {
     font-size: 0.8rem;
   }
 }
