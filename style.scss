@@ -811,6 +811,11 @@ blockquote {
 
     .projekt__content-image {
       flex: 5 1 0;
+      transition: all 600ms;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     .projekt__content-desc {
@@ -887,7 +892,7 @@ blockquote {
       display: flex;
       flex-direction: column;
       font-family: var(--font-serif);
-      color: #002742;
+      color: var(--color-light);
       font-size: var(--font-size-2);
 
       #name::placeholder,
@@ -927,6 +932,7 @@ blockquote {
         padding: 1rem;
         max-width: 40rem;
         background-color: var(--color-light);
+        color: var(--color-primary);
       }
 
       button {
